@@ -1,0 +1,45 @@
+name: Github Actions Pushover Webhook Notify
+author: NiNiyas
+description: >
+  Send notifications to Pushover.
+  Works with all execution environments including windows, macos, and linux.
+inputs:
+  pushoverUser:
+    description: Pushover User Token.
+    required: true
+  pushoverApp:
+    description: Pushover Application Token
+    required: true
+  details:
+    description: Additional text after the notification message.
+    required: false
+  device:
+    description: Device to sent notification to.
+    required: false
+  title:
+    description: Message title.
+    required: false
+  sound:
+    description: Notification sound.
+    required: false
+  url:
+    description: A URL to include in your message.
+    required: false
+  url_title:
+    description: A title for your url.
+    required: false
+  priority:
+    description: Notification priority.
+    required: false
+  retries:
+    description: Must be included if priority is Emergency (2).
+    required: false
+  expire:
+    description: Must be included if priority is Emergency (2).
+    required: false
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  color: orange
+  icon: alert-triangle
