@@ -31,6 +31,7 @@ More info on: https://pushover.net/api
     if: failure()
     with:
         details: Test Failed!
+        priority: 1
         pushoverUser: ${{ secrets.PUSHOVER_USER }}
         pushoverApp: ${{ secrets.PUSHOVER_APP }}
 - name: Test Cancelled
